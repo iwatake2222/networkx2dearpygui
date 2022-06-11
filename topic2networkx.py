@@ -4,19 +4,19 @@ import matplotlib.image as mpimg
 import pygraphviz as pgv
 
 topic_pub_dict = {
-    "/topic_0": ["/node0"],
-    "/topic_1": ["/node1"],
-    "/topic_2": ["/node2"],
-    "/topic_3": ["/node3"],
-    "/topic_5": ["/node3"],
+    "/topic_0": ["/node_0"],
+    "/topic_1": ["/node_1"],
+    "/topic_2": ["/node_2"],
+    "/topic_3": ["/node_3"],
+    "/topic_5": ["/node_3"],
 }
 
 topic_sub_dict = {
-    "/topic_0": ["/node1"],
-    "/topic_1": ["/node2", "/node3"],
-    "/topic_2": ["/node4"],
-    "/topic_3": ["/node5"],
-    "/topic_2": ["/node5"],
+    "/topic_0": ["/node_1"],
+    "/topic_1": ["/node_2", "/node_3"],
+    "/topic_2": ["/node_4"],
+    "/topic_3": ["/node_5"],
+    "/topic_2": ["/node_5"],
 }
 
 G = nx.DiGraph()

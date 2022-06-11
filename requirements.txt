@@ -4,3 +4,5 @@ dearpygui
 # sudo apt install graphviz graphviz-dev
 # graphviz
 # pygraphviz
+
+# pyyaml
