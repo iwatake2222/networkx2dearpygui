@@ -2,7 +2,7 @@ import networkx as nx
 import matplotlib.pyplot as plt
 import yaml
 
-def convert_yaml2networkx(filename):
+def yaml2networkx(filename):
     topic_pub_dict = {
         # "/topic_0": ["/node_0"],
     }
@@ -47,7 +47,7 @@ def convert_yaml2networkx(filename):
     return G
 
 if __name__ == '__main__':
-    G = convert_yaml2networkx('sample_0.yaml')
+    G = yaml2networkx('sample_0.yaml')
     pos = nx.spring_layout(G)
     # pos = nx.circular_layout(G)
     nx.draw_networkx(G, pos)
