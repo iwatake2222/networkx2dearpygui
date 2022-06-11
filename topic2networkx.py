@@ -1,5 +1,7 @@
 import networkx as nx
 import matplotlib.pyplot as plt
+import matplotlib.image as mpimg
+import pygraphviz as pgv
 
 topic_pub_dict = {
     "/topic_0": ["/node0"],
@@ -28,10 +30,19 @@ for topic, node_pub_list in topic_pub_dict.items():
     for node_pub in node_pub_list:
         for node_sub in node_sub_list:
             # print(topic, node_pub, node_sub)
-            G.add_edge(node_pub, node_sub)
-            G.edges[node_pub, node_sub]["topic"] = topic
+            G.add_edge(node_pub, node_sub, label=topic)
 
 
 pos = nx.spring_layout(G)
 nx.draw_networkx(G, pos)
+plt.show()
+
+H = nx.nx_agraph.to_agraph(G)
+H.layout(prog='circo')
+nx.draw_networkx(nx.nx_agraph.from_agraph(H))
+plt.show()
+
+nx.nx_agraph.to_agraph(G).draw('graph.png', prog='circo')
+img = mpimg.imread('graph.png')
+imgplot = plt.imshow(img)
 plt.show()
