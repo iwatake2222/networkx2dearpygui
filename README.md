@@ -5,5 +5,5 @@
 
 ```
 pip3 install -r requirements.txt
-python3 networkx2deapygui.py
+python3 networkx2dearpygui.py
 ```

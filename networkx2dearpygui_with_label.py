@@ -3,7 +3,7 @@ import networkx as nx
 import matplotlib.pyplot as plt
 import dearpygui.dearpygui as dpg
 
-def networkx2deapygui(G, layout, width, height):
+def networkx2dearpygui(G, layout, width, height):
     # Get node and edge information
     node_list = G.nodes
     edge_list = G.edges
@@ -72,7 +72,7 @@ if __name__ == '__main__':
 
     # Draw the graph using Dear PyGui Node Editor
     dpg.create_context()
-    networkx2deapygui(G, layout, 600, 400)
+    networkx2dearpygui(G, layout, 600, 400)
     dpg.create_viewport(title='NetworkX Graph', width=600, height=400)
     dpg.setup_dearpygui()
     dpg.show_viewport()
